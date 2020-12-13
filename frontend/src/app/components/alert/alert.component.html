@@ -1,0 +1,11 @@
+<div class="system-messgaes">
+  <div *ngIf="message"
+    [ngClass]="{ 'alert': message, 'alert-success': message.type === 'success', 'alert-danger': message.type === 'error' }">
+    {{message.text}}
+    <button type="button" class="close" (click)="removeAlertMessage()">
+      <span aria-hidden="true">&times;</span>
+      <span class="sr-only">Close</span>
+    </button>
+  </div>
+</div>
+
